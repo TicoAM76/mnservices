@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clínica Dental en Paterna | Ortodoncia e Implantes en Valencia</title>
+    <meta name="description"
+        content="Clínica dental en Paterna especializada en ortodoncia, implantes dentales y estética dental. Primera valoración y urgencias dentales en Valencia.">
+
+    <style>
+        :root {
+            --brand: #1f4aa8;
+            --brand2: #2a63ff;
+            --accent: #20d3a6;
+            --accent2: #7ef2d9;
+            --ink: #0b1220;
+            --muted: #5b6476;
+            --bg: #f4f7ff;
+            --shadow: 0 16px 48px rgba(13, 31, 64, .12);
+            --shadowHover: 0 22px 70px rgba(13, 31, 64, .18);
+            --radius: 18px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+            color: var(--ink);
+            background:
+                radial-gradient(900px 520px at 10% 10%, rgba(32, 211, 166, .12), transparent 55%),
+                radial-gradient(900px 520px at 90% 20%, rgba(31, 74, 168, .14), transparent 55%),
+                var(--bg);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 18px
+        }
+
+        <script type="application/ld+json"> {
+
+            "@context": "https://schema.org",
+            "@type": "Dentist",
+            "name": "Clínica Dental en Paterna",
+            "address": {
+                "@type": "PostalAddress",
+                    "addressLocality": "Paterna",
+                    "addressRegion": "Valencia",
+                    "addressCountry": "ES"
+            }
+
+            ,
+            "telephone": "+34624484557",
+            "areaServed": "Paterna, Valencia"
+        }
+
+        </script>
+
+        /* Topbar */
+        .topbar {
+            background: #070b14;
+            color: rgba(255, 255, 255, .88);
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 18px;
+        }
+
+        .topbar a {
+            color: #20d3a6;
+        }
+
+        .topbar .sep {
+            margin: 0 10px;
+            color: rgba(255, 255, 255, .35);
+        }
+
+        @media(max-width:700px) {
+            .topbar .container {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .topbar .sep {
+                display: none
+            }
+        }
+
+        /* Nav */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, .84);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(15, 23, 42, .08);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            gap: 12px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 1000
+        }
+
+        .brand img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain
+        }
+
+        .brand span {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.05
+        }
+
+        .brand small {
+            font-weight: 900;
+            color: var(--muted)
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+            align-items: center
+        }
+
+        .menu a {
+            font-weight: 900;
+            color: #23324b;
+            padding: 10px 12px;
+            border-radius: 14px;
+        }
+
+        .menu a:hover {
+            background: rgba(31, 74, 168, .08)
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-weight: 1000;
+            border: 0;
+            cursor: pointer;
+            transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+            user-select: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand), var(--brand2));
+            color: #fff;
+            box-shadow: 0 14px 30px rgba(31, 74, 168, .30);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 52px rgba(31, 74, 168, .36)
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            color: #063b33;
+            box-shadow: 0 14px 30px rgba(32, 211, 166, .25);
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 52px rgba(32, 211, 166, .32)
+        }
+
+        .btn-outline {
+            background: #fff;
+            border: 2px solid rgba(31, 74, 168, .22);
+            color: var(--brand);
+        }
+
+        .btn-outline:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 36px rgba(13, 31, 64, .12)
+        }
+
+        .badge {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            background: rgba(32, 211, 166, .16);
+            color: #0b6a58;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-weight: 900;
+            font-size: 13px;
+        }
+
+        /* HERO / Slider */
+        .hero {
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero-shape {
+            position: absolute;
+            left: -140px;
+            bottom: -180px;
+            width: 560px;
+            height: 560px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(32, 211, 166, .22), rgba(31, 74, 168, .18) 55%, transparent 72%);
+            pointer-events: none;
+        }
+
+        .pd-slider {
+            position: relative;
+            height: 78vh;
+            min-height: 560px
+        }
+
+        .pd-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: scale(1.03);
+            transition: opacity .7s ease, transform 1.1s ease;
+        }
+
+        .pd-slide.is-active {
+            opacity: 1;
+            transform: scale(1)
+        }
+
+        .pd-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .pd-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(7, 11, 20, .82) 0%, rgba(7, 11, 20, .55) 45%, rgba(7, 11, 20, .20) 100%),
+                radial-gradient(1200px 520px at 20% 20%, rgba(32, 211, 166, .22), transparent 55%),
+                radial-gradient(900px 520px at 85% 25%, rgba(31, 74, 168, .22), transparent 55%);
+        }
+
+        .pd-hero-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center
+        }
+
+        .pd-hero-grid {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 18px;
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .pd-kicker {
+            color: rgba(126, 242, 217, .95);
+            font-weight: 1000;
+            letter-spacing: .2px
+        }
+
+        .pd-h1 {
+            color: #fff;
+            font-size: 50px;
+            line-height: 1.05;
+            margin: 10px 0 10px;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+        }
+
+        .pd-p {
+            color: rgba(255, 255, 255, .90);
+            font-size: 18px;
+            margin: 0 0 18px;
+            max-width: 62ch
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(10px)
+        }
+
+        .fade-up.is-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity .48s ease, transform .48s ease
+        }
+
+        .pd-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .pd-bullets {
+            margin: 14px 0 0;
+            padding-left: 18px
+        }
+
+        .pd-bullets li {
+            color: rgba(255, 255, 255, .88);
+            margin: 6px 0
+        }
+
+        .pd-hero-card {
+            background: rgba(255, 255, 255, .10);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 20px;
+            padding: 18px 16px;
+            color: rgba(255, 255, 255, .90);
+            box-shadow: 0 18px 60px rgba(0, 0, 0, .20);
+        }
+
+        .pd-hero-card b {
+            color: #fff
+        }
+
+        .pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, .10);
+            border: 1px solid rgba(255, 255, 255, .18);
+            padding: 8px 10px;
+            border-radius: 999px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, .92);
+            font-size: 13px;
+        }
+
+        /* slider UI */
+        .pd-ui {
+            position: absolute;
+            inset: 0;
+            pointer-events: none
+        }
+
+        .pd-arrow {
+            pointer-events: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, .24);
+            background: rgba(0, 0, 0, .25);
+            display: grid;
+            place-items: center;
+            color: #fff;
+            cursor: pointer;
+            transition: transform .18s ease, background .18s ease;
+        }
+
+        .pd-arrow:hover {
+            background: rgba(0, 0, 0, .35);
+            transform: translateY(-50%) scale(1.05)
+        }
+
+        .pd-prev {
+            left: 16px
+        }
+
+        .pd-next {
+            right: 16px
+        }
+
+        .pd-dots {
+            pointer-events: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 18px;
+            display: flex;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, .22);
+            border: 1px solid rgba(255, 255, 255, .18);
+        }
+
+        .pd-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .45);
+            cursor: pointer
+        }
+
+        .pd-dot.is-active {
+            background: var(--accent)
+        }
+
+        .pd-progress {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 4px;
+            background: rgba(255, 255, 255, .12)
+        }
+
+        .pd-progress span {
+            display: block;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent), var(--accent2))
+        }
+
+        /* Benefit band */
+        .benefit-band {
+            background: linear-gradient(90deg, rgba(32, 211, 166, .95), rgba(31, 74, 168, .92));
+            color: rgba(255, 255, 255, .95);
+        }
+
+        .benefit-wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 14px 18px;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-weight: 1000;
+        }
+
+        .bitem {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        /* Sections + cards */
+        .section {
+            padding: 78px 0
+        }
+
+        .section.alt {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .60), rgba(255, 255, 255, .12));
+            border-top: 1px solid rgba(15, 23, 42, .06);
+            border-bottom: 1px solid rgba(15, 23, 42, .06);
+        }
+
+        h2 {
+            margin: 10px 0 10px;
+            font-size: 34px
+        }
+
+        p.lead {
+            margin: 0 0 26px;
+            color: var(--muted);
+            max-width: 75ch
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card {
+            background: rgba(255, 255, 255, .92);
+            border: 1px solid rgba(15, 23, 42, .06);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 18px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .18s ease, box-shadow .18s ease;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--brand2));
+            opacity: .95;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadowHover)
+        }
+
+        .row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start
+        }
+
+        .icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: rgba(31, 74, 168, .10);
+            color: var(--brand);
+            font-weight: 1000;
+            flex: 0 0 auto;
+        }
+
+        .h3 {
+            margin: 8px 0 6px
+        }
+
+        .small {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* Contact split */
+        .split {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 18px;
+            align-items: stretch
+        }
+
+        .photo {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(15, 23, 42, .06);
+            height: 320px
+        }
+
+        .photo iframe {
+            width: 100%;
+            height: 100%;
+            border: 0
+        }
+
+        .form {
+            display: grid;
+            gap: 12px
+        }
+
+        .field {
+            display: grid;
+            gap: 6px
+        }
+
+        label {
+            font-weight: 1000;
+            color: #23324b
+        }
+
+        input,
+        textarea {
+            border-radius: 14px;
+            border: 1px solid rgba(15, 23, 42, .14);
+            padding: 12px 12px;
+            font-size: 15px;
+            outline: none;
+            background: white;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: rgba(31, 74, 168, .48);
+            box-shadow: 0 0 0 4px rgba(31, 74, 168, .12)
+        }
+
+        /* Footer */
+        .footer {
+            background: #070b14;
+            color: rgba(255, 255, 255, .78);
+            padding: 38px 0;
+            margin-top: 40px
+        }
+
+        .footer .cols {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 18px
+        }
+
+        .footer h4 {
+            margin: 0 0 10px;
+            color: #fff
+        }
+
+        /* WhatsApp floating */
+        .whatsapp {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 80;
+            width: 56px;
+            height: 56px;
+            border-radius: 999px;
+            background: #25D366;
+            color: white;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 18px 46px rgba(0, 0, 0, .22);
+            font-weight: 1000;
+        }
+
+        @media (max-width:980px) {
+            .menu {
+                display: none
+            }
+
+            .pd-hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .pd-h1 {
+                font-size: 40px
+            }
+
+            .grid-3,
+            .split,
+            .footer .cols {
+                grid-template-columns: 1fr
+            }
+
+            .pd-slider {
+                height: 76vh;
+                min-height: 560px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <div>Clínica Dental en Paterna · Valencia</div>
+            <div>
+                <a href="tel:+34624484557">📞 +34 624 484 557</a>
+                &nbsp; | &nbsp;
+                <a href="https://wa.me/34624484557" target="_blank">💬 WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="nav">
+        <div class="container nav-inner">
+
+            <a class="brand" href="clinica-dental.html">
+                <img src="dental-logo.png" alt="Clínica Dental en Paterna - Ortodoncia e Implantes"
+                    style="height:44px;width:auto;">
+                <span>
+                    Clínica Dental en Paterna
+                    <small>Ortodoncia · Implantes · Estética dental</small>
+                </span>
+            </a>
+
+            <nav class="menu" aria-label="Menú principal">
+                <a href="#tratamientos">Tratamientos</a>
+                <a href="#spots">Urgencias Dentales</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <a class="btn btn-primary"
+                href="https://wa.me/34624484557?text=Hola%20quiero%20cita%20en%20la%20cl%C3%ADnica%20dental%20de%20Paterna"
+                target="_blank" rel="noopener">
+                Pedir cita
+            </a>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-shape" aria-hidden="true"></div>
+
+        <div class="pd-slider" id="dentalSlider">
+            <div class="pd-progress"><span></span></div>
+
+            <div class="pd-slide is-active" data-kicker="Plantilla premium para clínicas"
+                data-title="Clínica Dental: confianza que genera citas"
+                data-text="Diseño moderno + WhatsApp + estructura para convertir visitas en reservas en Valencia/Paterna.">
+                <img src="hero-1.jpg" alt="Recepción clínica dental">
+                <div class="pd-overlay"></div>
+            </div>
+
+            <div class="pd-slide" data-kicker="Comunicación empresarial"
+                data-title="Atención rápida: menos espera, más pacientes"
+                data-text="WhatsApp Business + respuestas rápidas + formularios para agendar sin fricción.">
+                <img src="hero-2.jpg" alt="Equipo dental atendiendo paciente">
+                <div class="pd-overlay"></div>
+            </div>
+
+            <div class="pd-slide" data-kicker="SEO local" data-title="Posiciona “Dentista en Paterna” en Google"
+                data-text="Estructura por tratamientos + zona, lista para competir con clínicas locales.">
+                <img src="hero-3.jpg" alt="Sala dental moderna">
+                <div class="pd-overlay"></div>
+            </div>
+
+            <div class="pd-hero-content">
+                <div class="pd-hero-grid">
+                    <div>
+                        <div class="pd-kicker" id="heroKicker">Plantilla premium para clínicas</div>
+                        <h1 class="pd-h1" id="heroTitle">Clínica Dental: confianza que genera citas</h1>
+                        <p class="pd-p" id="heroText">Diseño moderno + WhatsApp + estructura para convertir visitas en
+                            reservas en Valencia/Paterna.</p>
+
+                        <div class="pd-actions fade-up is-in" id="heroActions">
+                            <a class="btn btn-accent" href="#contacto">Solicitar propuesta</a>
+                            <a class="btn btn-outline" href="#tratamientos">Ver tratamientos</a>
+                        </div>
+
+                        <ul class="pd-bullets">
+                            <li><b>Confianza:</b> equipo, tecnología, higiene, reseñas.</li>
+                            <li><b>Acción:</b> CTAs claros para pedir cita en 1 clic.</li>
+                            <li><b>SEO:</b> estructura por servicio y por zona.</li>
+                        </ul>
+                    </div>
+
+                    <div class="pd-hero-card">
+                        <b>Spots listos para captar</b>
+                        <div class="pills">
+                            <span class="pill">Urgencias</span>
+                            <span class="pill">Primera visita</span>
+                            <span class="pill">Financiación</span>
+                        </div>
+                        <p style="margin:12px 0 0;color:rgba(255,255,255,.86)">
+                            Ideal para anuncios, banners y secciones destacadas.
+                        </p>
+                        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                            <a class="btn btn-primary"
+                                href="https://wa.me/34624484557?text=Hola%20quiero%20la%20plantilla%20de%20cl%C3%ADnica%20dental"
+                                target="_blank" rel="noopener">WhatsApp</a>
+                            <a class="btn btn-outline" href="#spots">Ver spots</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pd-ui">
+                <button class="pd-arrow pd-prev" aria-label="Anterior" id="prevBtn">‹</button>
+                <button class="pd-arrow pd-next" aria-label="Siguiente" id="nextBtn">›</button>
+                <div class="pd-dots" id="dots">
+                    <span class="pd-dot is-active" data-dot="0"></span>
+                    <span class="pd-dot" data-dot="1"></span>
+                    <span class="pd-dot" data-dot="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefit Band -->
+    <section class="benefit-band">
+        <div class="benefit-wrap">
+            <div class="bitem">✅ Web rápida</div>
+            <div class="bitem">📍 SEO local (Valencia/Paterna)</div>
+            <div class="bitem">💬 WhatsApp 1 clic</div>
+            <div class="bitem">⭐ Diseño premium</div>
+        </div>
+    </section>
+
+    <!-- Tratamientos -->
+    <section class="section" id="tratamientos">
+        <div class="container">
+            <span class="badge">Tratamientos</span>
+            <h2>Tratamientos más buscados</h2>
+            <p class="lead">Bloques base para SEO y conversión. Luego puedes crear una página por tratamiento para
+                posicionar aún más.</p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="row">
+                        <div class="icon">🦷</div>
+                        <div>
+                            <h3 class="h3">Ortodoncia</h3>
+                            <div class="small">Brackets y alineadores. CTA a valoración.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="row">
+                        <div class="icon">🧩</div>
+                        <div>
+                            <h3 class="h3">Implantes</h3>
+                            <div class="small">Proceso + confianza (ideal ticket alto).</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="row">
+                        <div class="icon">✨</div>
+                        <div>
+                            <h3 class="h3">Estética dental</h3>
+                            <div class="small">Blanqueamiento, carillas, limpiezas.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Spots -->
+    <section class="section alt" id="spots">
+        <div class="container">
+            <span class="badge">Spots</span>
+            <h2>Spots (ganchos) que convierten</h2>
+            <p class="lead">Estos bloques sirven para banners, anuncios o secciones destacadas (suben mucho la
+                conversión).</p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3 class="h3">Urgencias dentales</h3>
+                    <p class="small">Atención rápida para dolor, infecciones o fracturas.</p>
+                    <a class="btn btn-outline" href="#contacto">Quiero este spot</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="h3">Primera valoración</h3>
+                    <p class="small">Captación para nuevos pacientes y familias.</p>
+                    <a class="btn btn-outline" href="#contacto">Quiero este spot</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="h3">Financiación / planes</h3>
+                    <p class="small">Facilita la decisión en implantes y ortodoncia.</p>
+                    <a class="btn btn-outline" href="#contacto">Quiero este spot</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+        <div class="container">
+            <span class="badge">Contacto</span>
+            <h2>¿Lo adaptamos a una clínica real?</h2>
+            <p class="lead">Escríbenos por WhatsApp y te preparamos el sitio con tu logo, ubicación, tratamientos y
+                llamadas a la acción.</p>
+
+            <div class="split">
+                <div class="card">
+                    <h3 class="h3">Datos</h3>
+                    <p class="small">Valencia · Paterna · Online</p>
+                    <p><b>WhatsApp:</b> +34 624 484 557</p>
+                    <p><b>Email:</b> contacto@mnservices.com</p>
+                    <div class="photo">
+                        <iframe title="Mapa" src="https://www.google.com/maps?q=Paterna%20Valencia&output=embed"
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="h3">Formulario (demo)</h3>
+                    <form class="form"
+                        onsubmit="event.preventDefault(); alert('Formulario demo: conecta esto a tu email/CRM.');">
+                        <div class="field">
+                            <label>Nombre</label>
+                            <input required placeholder="Tu nombre" />
+                        </div>
+                        <div class="field">
+                            <label>Email</label>
+                            <input required type="email" placeholder="tu@email.com" />
+                        </div>
+                        <div class="field">
+                            <label>Mensaje</label>
+                            <textarea rows="5" placeholder="Cuéntanos tu clínica, zona y tratamientos..."></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                        <a class="btn btn-accent"
+                            href="https://wa.me/34624484557?text=Hola%20quiero%20una%20propuesta%20para%20mi%20cl%C3%ADnica%20dental"
+                            target="_blank" rel="noopener">Enviar por WhatsApp</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a class="whatsapp"
+        href="https://wa.me/34624484557?text=Hola%20quiero%20una%20web%20para%20mi%20cl%C3%ADnica%20dental"
+        target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="cols">
+                <div>
+                    <h4>Mary & Nestor Services</h4>
+                    <p style="margin:0">Demo de plantilla para clínica dental. Imágenes locales + diseño premium.</p>
+                </div>
+                <div>
+                    <h4>Enlaces</h4>
+                    <div style="display:grid;gap:8px">
+                        <a href="#tratamientos">Tratamientos</a>
+                        <a href="#spots">Spots</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <div style="display:grid;gap:8px">
+                        <span>+34 624 484 557</span>
+                        <span>contacto@mnservices.com</span>
+                        <span>Valencia · Paterna</span>
+                    </div>
+                </div>
+            </div>
+            <div style="height:14px"></div>
+            <small>© 2026 Mary & Nestor Services</small>
+        </div>
+    </footer>
+
+    <script>
+        // Slider local + progress + dots (flechas funcionan) + animación de texto
+        (function () {
+            const slider = document.getElementById('dentalSlider');
+            if (!slider) return;
+
+            const slides = Array.from(slider.querySelectorAll('.pd-slide'));
+            const dots = Array.from(slider.querySelectorAll('.pd-dot'));
+            const progress = slider.querySelector('.pd-progress span');
+            const prev = document.getElementById('prevBtn');
+            const next = document.getElementById('nextBtn');
+
+            const kicker = document.getElementById('heroKicker');
+            const title = document.getElementById('heroTitle');
+            const text = document.getElementById('heroText');
+            const actions = document.getElementById('heroActions');
+
+            let idx = 0;
+            const INTERVAL = 6500;
+            let timer = null;
+
+            function animateText(s) {
+                kicker.textContent = s.dataset.kicker || '';
+                title.textContent = s.dataset.title || '';
+                text.textContent = s.dataset.text || '';
+                actions.classList.remove('is-in');
+                void actions.offsetWidth;
+                actions.classList.add('is-in');
+            }
+
+            function setActive(i) {
+                idx = (i + slides.length) % slides.length;
+                slides.forEach((s, k) => s.classList.toggle('is-active', k === idx));
+                dots.forEach((d, k) => d.classList.toggle('is-active', k === idx));
+                animateText(slides[idx]);
+
+                progress.style.transition = 'none';
+                progress.style.width = '0%';
+                requestAnimationFrame(() => {
+                    progress.style.transition = `width ${INTERVAL}ms linear`;
+                    progress.style.width = '100%';
+                });
+            }
+
+            function play() {
+                stop();
+                setActive(idx);
+                timer = setInterval(() => setActive(idx + 1), INTERVAL);
+            }
+            function stop() { if (timer) clearInterval(timer); timer = null; }
+
+            prev.addEventListener('click', () => { setActive(idx - 1); play(); });
+            next.addEventListener('click', () => { setActive(idx + 1); play(); });
+
+            dots.forEach(d => {
+                d.addEventListener('click', () => {
+                    setActive(Number(d.dataset.dot));
+                    play();
+                });
+            });
+
+            slider.addEventListener('mouseenter', stop);
+            slider.addEventListener('mouseleave', play);
+
+            setActive(0);
+            play();
+        })();
+    </script>
+</body>
+
+</html>

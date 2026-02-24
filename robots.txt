@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mnservices.com/sitemap.xml
