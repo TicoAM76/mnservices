@@ -1,0 +1,20 @@
+# venv
+.venv/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# env/secrets
+.env
+.env.*
+*.key
+*.pem
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+
