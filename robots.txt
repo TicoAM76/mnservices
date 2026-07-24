@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://mnservices.com/sitemap.xml
+Sitemap: https://mnservicios.es/sitemap.xml
