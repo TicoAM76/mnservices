@@ -18,3 +18,5 @@ Thumbs.db
 .vscode/*
 !.vscode/settings.json
 
+
+index.backup.html
