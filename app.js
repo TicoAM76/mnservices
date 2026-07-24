@@ -175,4 +175,96 @@
     });
   });
 
+
+  // Contact form -> Cloudflare Pages Function
+  const contactForm = document.querySelector('#contact-form');
+  const formStatus = document.querySelector('[data-form-status]');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const submitButton = contactForm.querySelector(
+        'button[type="submit"]'
+      );
+
+      const originalButtonText = submitButton
+        ? submitButton.textContent
+        : '';
+
+      if (formStatus) {
+        formStatus.textContent = '';
+        formStatus.classList.remove('is-success', 'is-error');
+      }
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+      }
+
+      const formData = new FormData(contactForm);
+
+      const payload = {
+        nombre: formData.get('nombre') || '',
+        empresa: formData.get('empresa') || '',
+        email: formData.get('email') || '',
+        telefono: formData.get('telefono') || '',
+        servicio: formData.get('servicio') || '',
+        mensaje: formData.get('mensaje') || '',
+        website: formData.get('website') || '',
+        origen: window.location.href,
+      };
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        let result = {};
+
+        try {
+          result = await response.json();
+        } catch {
+          result = {};
+        }
+
+        if (!response.ok || !result.ok) {
+          throw new Error(
+            result.message ||
+              'No pudimos enviar tu solicitud. Inténtalo de nuevo.'
+          );
+        }
+
+        contactForm.reset();
+
+        if (formStatus) {
+          formStatus.textContent =
+            result.message ||
+            'Hemos recibido tu solicitud. Te responderemos lo antes posible.';
+
+          formStatus.classList.add('is-success');
+        }
+      } catch (error) {
+        console.error('Error enviando el formulario:', error);
+
+        if (formStatus) {
+          formStatus.textContent =
+            error.message ||
+            'Se produjo un error. Escríbenos por WhatsApp o correo.';
+
+          formStatus.classList.add('is-error');
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
+    });
+  }
+
 })();

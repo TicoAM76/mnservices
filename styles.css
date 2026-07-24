@@ -584,3 +584,43 @@ a{color:inherit;text-decoration:none}
   opacity: 1;
   transform: translateY(0);
 }
+
+
+.form select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 10px;
+  background: var(--card);
+  color: inherit;
+  font: inherit;
+}
+
+.form-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.form-status {
+  min-height: 24px;
+  margin: 4px 0 0;
+  font-size: .95rem;
+}
+
+.form-status.is-success {
+  color: #24c784;
+}
+
+.form-status.is-error {
+  color: #ff6b6b;
+}
+
+.form button:disabled {
+  cursor: wait;
+  opacity: .7;
+}

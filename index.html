@@ -628,9 +628,9 @@
   <section class="section" id="contacto">
     <div class="container">
       <div class="title">
-        <div class="eyebrow">Contáctame</div>
-        <h2>Contacto para cualquier duda</h2>
-        <p>Te respondemos en menos de 24 horas.</p>
+        <div class="eyebrow">Hablemos de tu proyecto</div>
+        <h2>Cuéntanos qué necesita tu negocio</h2>
+        <p>Explícanos brevemente tu situación y te responderemos con los siguientes pasos.</p>
       </div>
       <div class="contact">
         <div class="cards">
@@ -657,14 +657,73 @@
             <div><b>Email</b><small><a href="mailto:clientes@mnservicios.es">clientes@mnservicios.es</a></small></div>
           </div>
         </div>
-        <form class="form"
-          onsubmit="event.preventDefault(); alert('Formulario demo. Conéctalo a Formspree / Netlify Forms / backend.');">
-          <input name="nombre" placeholder="Nombre" required="" type="text" />
-          <input name="email" placeholder="Email" required="" type="email" />
-          <input name="proyecto" placeholder="Proyecto (web, SEO, mantenimiento)" type="text" />
-          <input name="telefono" placeholder="Teléfono / WhatsApp" type="text" />
-          <textarea name="mensaje" placeholder="Mensaje"></textarea>
-          <button class="btn primary" type="submit">Enviar Propuesta</button>
+        <form class="form" id="contact-form">
+          <input
+            autocomplete="name"
+            name="nombre"
+            placeholder="Nombre y apellidos"
+            required
+            type="text"
+          />
+
+          <input
+            autocomplete="organization"
+            name="empresa"
+            placeholder="Empresa o negocio"
+            type="text"
+          />
+
+          <input
+            autocomplete="email"
+            name="email"
+            placeholder="Correo electrónico"
+            required
+            type="email"
+          />
+
+          <input
+            autocomplete="tel"
+            name="telefono"
+            placeholder="Teléfono / WhatsApp"
+            type="tel"
+          />
+
+          <select name="servicio">
+            <option value="">¿Qué necesitas?</option>
+            <option value="Nueva página web">Nueva página web</option>
+            <option value="Mejorar una web existente">Mejorar una web existente</option>
+            <option value="SEO local y Google Business">SEO local y Google Business</option>
+            <option value="Automatización">Automatización</option>
+            <option value="Tienda online">Tienda online</option>
+            <option value="Soporte y mantenimiento">Soporte y mantenimiento</option>
+            <option value="No estoy seguro">No estoy seguro</option>
+          </select>
+
+          <textarea
+            name="mensaje"
+            placeholder="Cuéntanos brevemente qué quieres mejorar o resolver"
+            required
+          ></textarea>
+
+          <input
+            aria-hidden="true"
+            autocomplete="off"
+            class="form-honeypot"
+            name="website"
+            tabindex="-1"
+            type="text"
+          />
+
+          <button class="btn primary" type="submit">
+            Solicitar consulta
+          </button>
+
+          <p
+            aria-live="polite"
+            class="form-status"
+            data-form-status
+            role="status"
+          ></p>
         </form>
       </div>
     </div>
